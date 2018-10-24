@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Store_Fragments.ShopCart">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolCarro"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Clodus"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="@+id/RecyclerCarro"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerCarro"
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        tools:layout_editor_absoluteX="8dp" />
+    <View
+        android:id="@+id/sep1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/RecyclerCarro" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/verTot"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+        <CheckBox
+            android:id="@+id/Sust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autorizó Traer Sustitutos" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/verTot"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/Clodus"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/PagarC"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:textColor="@color/Negro"
+                android:textStyle="bold"
+                android:text="Sub Total :"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                              "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/NegroC"
+                android:text="   $"/>
+
+            <TextView
+                android:id="@+id/subTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0"
+                android:textColor="@color/NegroC" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            >
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:textColor="@color/Negro"
+                android:textStyle="bold"
+                android:text="Costo de Envio :"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                              "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/NegroC"
+                android:text="   $"/>
+            <TextView
+                android:id="@+id/costoEnvio"
+                android:textColor="@color/NegroC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            >
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:textColor="@color/Negro"
+                android:textStyle="bold"
+                android:text="Promociones :"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                              "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/NegroC"
+                android:text=" - $"/>
+            <TextView
+                android:id="@+id/promociones"
+                android:textColor="@color/NegroC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            >
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:textColor="@color/Negro"
+                android:textStyle="bold"
+                android:text="Total :"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                              "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/NegroC"
+                android:text="   $"/>
+            <TextView
+                android:id="@+id/totalT"
+                android:textColor="@color/NegroC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/PagarC"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/MainG"
+        android:elegantTextHeight="true"
+        android:text="Pagar"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="4dp"
+        android:fadingEdgeLength="4dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

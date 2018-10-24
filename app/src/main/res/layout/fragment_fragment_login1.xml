@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/fragment_login1"
+    tools:context=".Login.fragment_login1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="184dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center" 
+        android:src="@drawable/mainicon" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal|bottom"
+
+        android:src="@drawable/headerbg" />
+
+    <Button
+        android:id="@+id/ingresar"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:background="#D8D8D8"
+        android:text="Iniciar Sesion" />
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="40dp"
+        android:background="#000000"
+        android:text="Registrarse"
+        android:textColor="#FFFFFF" />
+
+
+</FrameLayout>

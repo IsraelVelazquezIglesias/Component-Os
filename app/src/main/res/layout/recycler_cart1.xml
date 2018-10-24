@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Blanco"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_margin="8dp"
+        android:id="@+id/NombreCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombre Item"/>
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio Unitario :"/>
+
+        <TextView
+            android:layout_margin="8dp"
+            android:id="@+id/PrecioCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Precio"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageButton
+            android:id="@+id/add1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add_circle_outline_black_24dp"
+            android:background="@color/Blanco"/>
+
+        <EditText
+            android:id="@+id/CantCart"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:inputType="number"
+            />
+
+        <ImageButton
+            android:id="@+id/rest1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/Blanco"
+            android:src="@drawable/ic_remove_circle_outline_black_24dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/dellT"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:background="@color/Blanco"/>
+
+    <LinearLayout
+        android:layout_marginTop="55dp"
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio Total :    "/>
+
+        <TextView
+            android:layout_margin="8dp"
+            android:id="@+id/PrecioTCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Precio"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/sep1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="89dp"
+        android:background="@android:color/darker_gray" />
+
+
+</RelativeLayout>

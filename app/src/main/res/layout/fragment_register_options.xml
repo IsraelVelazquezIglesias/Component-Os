@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.RegisterOptions"
+    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:src="@drawable/pcbimage"
+        android:scaleType="centerCrop"/>
+
+
+    <EditText
+        android:id="@+id/Nombre"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:ems="9"
+        android:hint="Nombre(s)"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/Apellidos"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Apellidos" />
+    <EditText
+        android:id="@+id/Correo"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Correo Electronico" />
+    <EditText
+        android:id="@+id/Numero"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Numero Telefonico" />
+    <EditText
+        android:id="@+id/Contrasena"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Contraseña" />
+
+    <CheckBox
+        android:id="@+id/mostarC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="0dp"
+        android:text="Mostrar Contraseña" />
+
+    <Button
+        android:id="@+id/Continuar"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#000000"
+        android:text="Continuar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Regresar"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start|bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:background="#D8D8D8"
+        android:text="Regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</FrameLayout>

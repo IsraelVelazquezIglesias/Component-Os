@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b33939</color>
+    <color name="colorPrimaryDark">#104566</color>
+    <color name="colorAccent">#f7a964</color>
+    <color name="Negro">#2f3640</color>
+    <color name="NegroC">#353b48</color>
+    <color name="MainA">#104566</color>
+    <color name="MainG">#b33939</color>
+    <color name="SecA">#1F97D1</color>
+    <color name="SecG">#E86975</color>
+    <color name="Ref">#F7A964</color>
+    <color name="AzulN">#2c3e50</color>
+    <color name="Gris_O">#7f8c8d</color>
+    <color name="Silver">#bdc3c7</color>
+    <color name="Clodus">#dcdde1</color>
+    <color name="Blanco">#ffffff</color>
+</resources>

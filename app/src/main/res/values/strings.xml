@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">App Def 1_0</string>
+    <string name="openDrawer">Drawer Abierto</string>
+    <string name="closeDrawer">Drawer Cerrado</string>
+    <string name="UserName">UserName</string>
+    <string name="Correo">null</string>
+    <string name="Tel">null</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">blank fragment</string>
+    <string name="server">https://component-os.000webhostapp.com</string>
+    <string name="Integrados">Integrados</string>
+    <string name="Transistores">Transistores</string>
+    <string name="Resistencias">Resistencias</string>
+    <string name="Leds">Leds</string>
+    <string name="Componentes">Componentes</string>
+    <string name="Energia">Energia</string>
+    <string name="Arduino">Arduino</string>
+    <string name="PICS">PICS</string>
+    <string name="Opto">Optoelectronica</string>
+    <string name="Robotica">Robotica</string>
+    <string name="Quimicos">Quimicos</string>
+    <string name="Cable">Cable</string>
+    <string name="Interruptores">Interruptores</string>
+    <string name="Herramientas">Herramientas</string>
+    <string name="Buscar">Buscar</string>
+    <string name="CarroCompras">Carrito de Compras</string>
+</resources>
