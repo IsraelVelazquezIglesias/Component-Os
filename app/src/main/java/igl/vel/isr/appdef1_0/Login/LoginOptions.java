@@ -146,6 +146,8 @@ public class LoginOptions extends Fragment implements View.OnClickListener{
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Snackbar.make(getView(),"SE HA ENVIADO UN CORREO DE RESTABLECIMIENTO",Snackbar.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getContext(), "Error enviando", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -167,7 +169,7 @@ public class LoginOptions extends Fragment implements View.OnClickListener{
                         } else {
                             progressDialog.dismiss();
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(getContext(), "Falla", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Falla al ingresar", Toast.LENGTH_SHORT).show();
                         }
 
                         // ...

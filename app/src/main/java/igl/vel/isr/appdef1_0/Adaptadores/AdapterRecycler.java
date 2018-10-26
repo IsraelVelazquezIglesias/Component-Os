@@ -18,16 +18,25 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.ViewHo
 
     private ArrayList<stringblob> ListDatos;
     private View.OnClickListener listener;
+    private int activity;
 
-    public AdapterRecycler(ArrayList<stringblob> listDatos) {
+    public AdapterRecycler(ArrayList<stringblob> listDatos, int act) {
+        this.activity = act;
         this.ListDatos = listDatos;
     }
     @NonNull
     @Override
     public ViewHolderDatos onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_items1,null,false);
-        view.setOnClickListener(this);
-        return new ViewHolderDatos(view);
+        if (activity == 1) {
+            View view1 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_items1, null, false);
+            view1.setOnClickListener(this);
+            return new ViewHolderDatos(view1);
+        } else {
+            View view2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_list, null, false);
+            view2.setOnClickListener(this);
+            return new ViewHolderDatos(view2);
+        }
+
     }
 
     @Override

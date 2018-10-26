@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import igl.vel.isr.appdef1_0.MainActivity;
 import igl.vel.isr.appdef1_0.R;
+import igl.vel.isr.appdef1_0.University_Menus.UniversityActivity;
 
 public class loginActivity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         fragment_login1 fragment_login = new fragment_login1();
-        Intent intent3 = new Intent(this, MainActivity.class);
+        Intent intent3 = new Intent(this, UniversityActivity.class);
         mAuth = FirebaseAuth.getInstance();
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

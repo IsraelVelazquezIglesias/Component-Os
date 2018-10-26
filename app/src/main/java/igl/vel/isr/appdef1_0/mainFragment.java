@@ -89,7 +89,7 @@ public class mainFragment extends Fragment {
 
         ListDatos = new ArrayList<>();
         llenarPantalla();
-        AdapterRecycler adapter1 = new AdapterRecycler(ListDatos);
+        AdapterRecycler adapter1 = new AdapterRecycler(ListDatos, 1);
         adapter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

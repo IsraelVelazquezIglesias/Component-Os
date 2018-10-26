@@ -24,4 +24,5 @@
     <string name="Herramientas">Herramientas</string>
     <string name="Buscar">Buscar</string>
     <string name="CarroCompras">Carrito de Compras</string>
+    <string name="title_activity_university">UniversityActivity</string>
 </resources>
