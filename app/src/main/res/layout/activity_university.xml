@@ -6,9 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".University_Menus.UniversityActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolUni"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Clodus"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.AppCompat.Light"></android.support.v7.widget.Toolbar>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/SeleccionUniversidad"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolUni" />
 </android.support.constraint.ConstraintLayout>
