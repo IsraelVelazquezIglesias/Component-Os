@@ -55,7 +55,8 @@ public class UniversityActivity extends AppCompatActivity {
     private void llenarEscuelas() {
 
         listEscuelas.add(new stringblob("Escuela Superior de Ingeniería Mecánica y Eléctrica", R.drawable.esimelogo));
-        listEscuelas.add(new stringblob("Escuela Superior de Ingeniería Química e Industrias Extractivas", R.drawable.esiqielogo));
+        listEscuelas.add(new stringblob("Escuela Superior de Ingeniería Química e Industrias Extractivas", R.drawable.esiqielogo01));
+        listEscuelas.add(new stringblob("Escuela Superior de Física y Matematicas", R.drawable.esfmlogo));
     }
 
     private void clickOnCard(View v) {
@@ -71,6 +72,13 @@ public class UniversityActivity extends AppCompatActivity {
             break;
 
             case "Escuela Superior de Ingeniería Química e Industrias Extractivas": {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+            break;
+
+            case "Escuela Superior de Física y Matematicas": {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finish();
