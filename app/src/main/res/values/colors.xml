@@ -15,4 +15,13 @@
     <color name="Silver">#bdc3c7</color>
     <color name="Clodus">#dcdde1</color>
     <color name="Blanco">#ffffff</color>
+
+    // Colores por Escuela
+
+    //ESIME
+    <color name="Verde_Esime">#00923f</color>
+    <color name="Verde_Esime_D">#00623f</color>
+    <color name="Gris_Esime">#97aebe</color>
+    <color name="Gris_Esime_D">#7f8c8d</color>
+    //ESIQIE
 </resources>
