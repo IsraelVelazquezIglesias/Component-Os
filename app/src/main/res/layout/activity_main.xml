@@ -8,9 +8,6 @@
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,11 +20,6 @@
             android:id="@+id/frame">
         </FrameLayout>
     </LinearLayout>
-
-
-
-
-
     <android.support.design.widget.NavigationView
         android:id="@+id/navi_view"
         android:layout_width="match_parent"
@@ -36,11 +28,7 @@
         app:headerLayout="@layout/header"
         app:menu="@menu/drawer"
         android:background="#FFFFFF"
-        app:itemIconTint="#000000"
-
-        >
-
-
+        app:itemIconTint="#000000">
     </android.support.design.widget.NavigationView>
 
 

@@ -72,14 +72,14 @@ public class UniversityActivity extends AppCompatActivity {
             break;
 
             case "Escuela Superior de Ingeniería Química e Industrias Extractivas": {
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, ESIQIE.class);
                 startActivity(intent);
                 finish();
             }
             break;
 
             case "Escuela Superior de Física y Matematicas": {
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, ESFM.class);
                 startActivity(intent);
                 finish();
             }

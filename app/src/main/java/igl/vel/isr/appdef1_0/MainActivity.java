@@ -45,10 +45,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         mainFragment fragmento = new mainFragment();
-
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame,fragmento);
-
         transaction.commit();
 
         drawerLayout = findViewById(R.id.Drawer_Layout);

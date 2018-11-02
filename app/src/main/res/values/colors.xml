@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#b33939</color>
     <color name="colorPrimaryDark">#104566</color>
-    <color name="colorAccent">#f7a964</color>
+    <color name="colorAccent">#4cd137</color>
     <color name="Negro">#2f3640</color>
     <color name="NegroC">#353b48</color>
     <color name="MainA">#104566</color>
@@ -19,9 +19,9 @@
     // Colores por Escuela
 
     //ESIME
-    <color name="Verde_Esime">#27ae60</color>
-    <color name="Verde_Esime_Tr">#A227ae60</color>
-    <color name="Verde_Esime_C">#2ecc71</color>
+    <color name="Verde_Esime">#44bd32</color>
+    <color name="Verde_Esime_Tr">#A244bd32</color>
+    <color name="Verde_Esime_C">#4cd137</color>
     <color name="Gris_Esime">#97aebe</color>
     <color name="Gris_Esime_D">#7f8c8d</color>
     //ESIQIE
