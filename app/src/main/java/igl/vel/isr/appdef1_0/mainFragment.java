@@ -3,6 +3,8 @@ package igl.vel.isr.appdef1_0;
 import android.app.SearchManager;
 import android.content.Context;
 import android.drm.DrmStore;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -59,15 +61,15 @@ public class mainFragment extends Fragment {
         mainActivity = (MainActivity) getActivity();
         draw = mainActivity.drawerLayout;
 
+
         Toolbar toolbar = v.findViewById(R.id.toolMain);
+        toolbar.setBackgroundColor(Color.parseColor("#27ae60"));
         mainActivity.setSupportActionBar(toolbar);
         //getActivity().onCreateOptionsMenu()
         setHasOptionsMenu(true);
         toggle = new ActionBarDrawerToggle(mainActivity,mainActivity.drawerLayout,toolbar,R.string.openDrawer,R.string.closeDrawer);
         mainActivity.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
-
 
         recycler = v.findViewById(R.id.recycler1);
         recycler.setFocusable(false);

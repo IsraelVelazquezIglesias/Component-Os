@@ -19,8 +19,9 @@
     // Colores por Escuela
 
     //ESIME
-    <color name="Verde_Esime">#00923f</color>
-    <color name="Verde_Esime_D">#00623f</color>
+    <color name="Verde_Esime">#27ae60</color>
+    <color name="Verde_Esime_Tr">#A227ae60</color>
+    <color name="Verde_Esime_C">#2ecc71</color>
     <color name="Gris_Esime">#97aebe</color>
     <color name="Gris_Esime_D">#7f8c8d</color>
     //ESIQIE
