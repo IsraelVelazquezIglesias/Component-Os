@@ -30,15 +30,12 @@
             android:layout_height="wrap_content"
             app:tabGravity="fill"
             app:tabMode="scrollable"
-            android:background="@color/SecG"
-            app:tabIndicatorColor="@color/Ref"
+            android:background="@color/Verde_Esime"
+            app:tabIndicatorColor="@color/Gris_Esime_D"
+
             >
         </android.support.design.widget.TabLayout>
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/imageI"
-            android:layout_gravity="center"/>
+
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerI"

@@ -13,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,9 +32,13 @@ import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import igl.vel.isr.appdef1_0.Adaptadores.ImageAdapter;
 import igl.vel.isr.appdef1_0.Store_Fragments.ShopCart;
 import igl.vel.isr.appdef1_0.var_per.stringblob;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import igl.vel.isr.appdef1_0.Store_Fragments.Componentes;
 import igl.vel.isr.appdef1_0.Store_Fragments.Energia;
 import igl.vel.isr.appdef1_0.Store_Fragments.Integrados;
@@ -53,15 +58,19 @@ public class mainFragment extends Fragment {
     Menu menu;
     FloatingActionButton actionButton;
     public MainActivity mainActivity;
+    View v;
+    ViewPager viewPager;
 
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
 
 
-        View v = inflater.inflate(R.layout.main_fragment,container,false);
+        v = inflater.inflate(R.layout.main_fragment, container, false);
         mainActivity = (MainActivity) getActivity();
         draw = mainActivity.drawerLayout;
-
-
+        viewPager = v.findViewById(R.id.imageMain);
+        ImageAdapter imageAdapter = new ImageAdapter(v.getContext());
+        viewPager.setPageTransformer(true, new Efectos());
+        viewPager.setAdapter(imageAdapter);
         Toolbar toolbar = v.findViewById(R.id.toolMain);
         toolbar.setBackgroundColor(Color.parseColor("#27ae60"));
         mainActivity.setSupportActionBar(toolbar);
@@ -101,6 +110,9 @@ public class mainFragment extends Fragment {
             }
         });
         recycler.setAdapter(adapter1);
+
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new MyTimerTask(), 5000, 5000);
         return v;
     }
 
@@ -155,14 +167,14 @@ public class mainFragment extends Fragment {
         ListDatos.add(new stringblob("Leds",R.drawable.ledmin));
         ListDatos.add(new stringblob("Componentes",R.drawable.componentesmin));
         ListDatos.add(new stringblob("Energia",R.drawable.energymin));
-        ListDatos.add(new stringblob("Arduino",R.drawable.energymin));
-        ListDatos.add(new stringblob("PIC'S",R.drawable.energymin));
-        ListDatos.add(new stringblob("Optoelectronica",R.drawable.energymin));
-        ListDatos.add(new stringblob("Robotica",R.drawable.energymin));
-        ListDatos.add(new stringblob("Quimicos",R.drawable.energymin));
-        ListDatos.add(new stringblob("Cable",R.drawable.energymin));
-        ListDatos.add(new stringblob("Interruptores",R.drawable.energymin));
-        ListDatos.add(new stringblob("Herramientas",R.drawable.energymin));
+        ListDatos.add(new stringblob("Arduino", R.drawable.arduinoic));
+        ListDatos.add(new stringblob("PIC'S", R.drawable.pics));
+        ListDatos.add(new stringblob("Optoelectronica", R.drawable.optpelectronica));
+        ListDatos.add(new stringblob("Robotica", R.drawable.robotica));
+        ListDatos.add(new stringblob("Quimicos", R.drawable.quimicos));
+        ListDatos.add(new stringblob("Cable", R.drawable.cable));
+        ListDatos.add(new stringblob("Interruptores", R.drawable.interruptores));
+        ListDatos.add(new stringblob("Herramientas", R.drawable.herramientas));
 
     }
 
@@ -182,5 +194,52 @@ public class mainFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    public class MyTimerTask extends TimerTask {
 
+        @Override
+        public void run() {
+            mainActivity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (viewPager.getCurrentItem() == 0) {
+                        viewPager.setCurrentItem(1);
+                    } else {
+                        viewPager.setCurrentItem(0);
+                    }
+                }
+            });
+        }
+    }
+
+    public class Efectos implements ViewPager.PageTransformer {
+        private static final float MIN_SCALE = 0.85f;
+        private static final float MIN_ALPHA = 0.5f;
+
+        @Override
+        public void transformPage(@NonNull View view, float position) {
+            int pageWidth = view.getWidth();
+            int pageHeight = view.getHeight();
+            if (position < -1) {
+                view.setAlpha(0f);
+            } else if (position <= 5) {
+                float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
+                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
+                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
+                if (position < 0) {
+                    view.setTranslationX(horzMargin - vertMargin / 2);
+                } else {
+                    view.setTranslationX(-horzMargin + vertMargin / 2);
+                }
+
+                view.setScaleX(scaleFactor);
+                view.setScaleY(scaleFactor);
+                view.setAlpha(MIN_ALPHA +
+                        (scaleFactor - MIN_SCALE) /
+                                (1 - MIN_SCALE) * (1 - MIN_ALPHA));
+            } else { // (1,+Infinity]
+                // This page is way off-screen to the right.
+                view.setAlpha(0f);
+            }
+        }
+    }
 }

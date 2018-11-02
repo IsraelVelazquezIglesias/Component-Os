@@ -3,6 +3,7 @@ package igl.vel.isr.appdef1_0.Store_Fragments;
 
 import android.app.Presentation;
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.nfc.Tag;
 import android.os.Bundle;
 
@@ -59,7 +60,7 @@ public class Integrados extends Fragment {
     private TabLayout tabLayout;
     //private FloatingActionButton fab;
     private RecyclerView recycler;
-    private ImageView imageView;
+
     private ArrayList<itemshop> listItem;
     private FirebaseFirestore database;
     private CollectionReference collectionTorneadas;
@@ -89,7 +90,7 @@ public class Integrados extends Fragment {
        // recycler.setLayoutManager(new LinearLayoutManager(vista.getContext(),LinearLayoutManager.VERTICAL,false));
 
         recycler.setLayoutManager(new GridLayoutManager(vista.getContext(),1));
-        imageView = vista.findViewById(R.id.imageI);
+
 
         llenarBases();
         toolbarset();
@@ -138,13 +139,13 @@ public class Integrados extends Fragment {
 
                     case "C.I TTL":
                     {
+
                         llenarTtl();
-                        imageView.setImageResource(R.drawable.ic_launcher);
                     }break;
 
                     case "CMOS 74HC":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
@@ -155,7 +156,7 @@ public class Integrados extends Fragment {
 
                     case "CMOS HEF":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
@@ -166,55 +167,55 @@ public class Integrados extends Fragment {
 
                     case "Drivers ULN":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "Puentes H":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "C.I MAX":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "C.I NE":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "C.I LM":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "OP AMP":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "Reguladores de Voltaje":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "GAL'S":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
                     case "DAC y ADC":
                     {
-                        imageView.setImageResource(R.drawable.ic_launcher);
+
 
                     }break;
 
@@ -240,7 +241,7 @@ public class Integrados extends Fragment {
         progressDialog.setMessage("Cargando...");
         progressDialog.show();
 
-        TTL.orderBy(PRECIO_ART, Query.Direction.ASCENDING).get()
+        TTL.orderBy(NOMBRE_ART, Query.Direction.ASCENDING).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -264,7 +265,6 @@ public class Integrados extends Fragment {
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Cargando...");
         progressDialog.show();
-        imageView.setImageResource(R.drawable.shop_cart);
         collectionTorneadas.orderBy(PRECIO_ART, Query.Direction.ASCENDING).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -290,6 +290,8 @@ public class Integrados extends Fragment {
     private void toolbarset() {
         //fab = vista.findViewById(R.id.actionb);
         Toolbar toolbar = vista.findViewById(R.id.toolMain);
+        toolbar.setBackgroundColor(Color.parseColor("#27ae60"));
+        toolbar.setTitle("Circuitos Integrados");
         mainActivity = (MainActivity) getActivity();
         mainActivity.setSupportActionBar(toolbar);
         mainActivity.getSupportActionBar().setDisplayShowTitleEnabled(true);

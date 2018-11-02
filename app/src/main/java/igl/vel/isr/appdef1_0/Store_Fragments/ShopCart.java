@@ -4,6 +4,7 @@ package igl.vel.isr.appdef1_0.Store_Fragments;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -67,6 +68,8 @@ Double total;
 
         recyclerView = vista.findViewById(R.id.RecyclerCarro);
         Toolbar toolbar = vista.findViewById(R.id.toolCarro);
+        toolbar.setBackgroundColor(Color.parseColor("#44bd32"));
+        toolbar.setTitle("Carro De Compras");
         mainActivity = (MainActivity) getActivity();
         assert mainActivity != null;
         mainActivity.setSupportActionBar(toolbar);
