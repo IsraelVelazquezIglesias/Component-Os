@@ -48,6 +48,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".puebaOliver"
+            android:label="@string/title_activity_pueba_oliver"></activity>
     </application>
 
 </manifest>

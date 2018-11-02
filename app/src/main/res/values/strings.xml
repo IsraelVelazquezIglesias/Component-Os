@@ -25,4 +25,5 @@
     <string name="Buscar">Buscar</string>
     <string name="CarroCompras">Carrito de Compras</string>
     <string name="title_activity_university">UniversityActivity</string>
+    <string name="title_activity_pueba_oliver">puebaOliver</string>
 </resources>
