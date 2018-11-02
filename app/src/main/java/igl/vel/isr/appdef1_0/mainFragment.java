@@ -70,6 +70,8 @@ public class mainFragment extends Fragment {
 
 
         recycler = v.findViewById(R.id.recycler1);
+        recycler.setFocusable(false);
+        v.findViewById(R.id.linear_recycler1).requestFocus();
         //recycler.setLayoutManager(new LinearLayoutManager(v.getContext(),LinearLayoutManager.VERTICAL,false));
 
         recycler.setLayoutManager(new GridLayoutManager(v.getContext(),2));
