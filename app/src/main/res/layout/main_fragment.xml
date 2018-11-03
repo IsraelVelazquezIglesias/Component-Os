@@ -25,6 +25,7 @@
         android:layout_below="@+id/toolMain"
         android:layout_marginTop="0dp"
         android:clipToPadding="false"
+        android:background="@color/Esime_BG"
         app:layout_behavior="@+id/toolMain">
 
         <LinearLayout
@@ -53,20 +54,4 @@
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/action"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-
-        android:layout_gravity="end|bottom"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:src="@drawable/shop_cart"
-        app:fabSize="auto" />
-
-
 </RelativeLayout>

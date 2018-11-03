@@ -1,15 +1,11 @@
 package igl.vel.isr.appdef1_0.Store_Fragments;
 
 
-import android.app.Presentation;
 import android.app.ProgressDialog;
 import android.graphics.Color;
-import android.nfc.Tag;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,16 +14,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -37,15 +29,12 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import igl.vel.isr.appdef1_0.Adaptadores.AdapterShop1;
 import igl.vel.isr.appdef1_0.MainActivity;
 import igl.vel.isr.appdef1_0.R;
 import igl.vel.isr.appdef1_0.var_per.itemshop;
-
-import static android.content.ContentValues.TAG;
 
 
 /**
@@ -80,7 +69,7 @@ public class Integrados extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        vista = inflater.inflate(R.layout.fragment_integrados, container, false);
+        vista = inflater.inflate(R.layout.fragment_mostrador, container, false);
 
         database = FirebaseFirestore.getInstance();
         collectionTorneadas = database.collection("componentes").document("BasesCI").collection("BasesTorneadas");
@@ -290,7 +279,7 @@ public class Integrados extends Fragment {
     private void toolbarset() {
         //fab = vista.findViewById(R.id.actionb);
         Toolbar toolbar = vista.findViewById(R.id.toolMain);
-        toolbar.setBackgroundColor(Color.parseColor("#27ae60"));
+        toolbar.setBackgroundColor(Color.parseColor("#43a047"));
         toolbar.setTitle("Circuitos Integrados");
         mainActivity = (MainActivity) getActivity();
         mainActivity.setSupportActionBar(toolbar);

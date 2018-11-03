@@ -1,9 +1,8 @@
 package igl.vel.isr.appdef1_0.Store_Fragments;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,7 +14,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import igl.vel.isr.appdef1_0.MainActivity;
 import igl.vel.isr.appdef1_0.R;
@@ -27,7 +25,6 @@ public class Resistencias extends Fragment {
     View vista;
     MainActivity mainActivity;
     TabLayout tabLayout;
-    FloatingActionButton fab;
 
     public Resistencias() {
         // Required empty public constructor
@@ -38,14 +35,14 @@ public class Resistencias extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        vista = inflater.inflate(R.layout.fragment_resistencias, container, false);
+        vista = inflater.inflate(R.layout.fragment_mostrador, container, false);
         toolbarset();
         tabLayoutset();
         return vista;
     }
 
     private void tabLayoutset() {
-        tabLayout = vista.findViewById(R.id.tabR);
+        tabLayout = vista.findViewById(R.id.tabI);
         crearTabs();
     }
 
@@ -62,8 +59,9 @@ public class Resistencias extends Fragment {
     }
 
     private void toolbarset() {
-        fab = vista.findViewById(R.id.actionbR);
-        Toolbar toolbar = vista.findViewById(R.id.toolRes);
+        Toolbar toolbar = vista.findViewById(R.id.toolMain);
+        toolbar.setBackgroundColor(Color.parseColor("#43a047"));
+        toolbar.setTitle("Resistencias");
         mainActivity = (MainActivity) getActivity();
         mainActivity.setSupportActionBar(toolbar);
         mainActivity.getSupportActionBar().setDisplayShowTitleEnabled(true);
@@ -80,13 +78,6 @@ public class Resistencias extends Fragment {
             }
         });
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         /*toggle = new ActionBarDrawerToggle(mainActivity,mainActivity.drawerLayout,toolbar,R.string.openDrawer,R.string.closeDrawer);
         mainActivity.drawerLayout.addDrawerListener(toggle);

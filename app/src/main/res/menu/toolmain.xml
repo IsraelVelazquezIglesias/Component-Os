@@ -8,5 +8,10 @@
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/Buscar"
         app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="@string/CarroCompras"
+        app:showAsAction="ifRoom" />
 
 </menu>

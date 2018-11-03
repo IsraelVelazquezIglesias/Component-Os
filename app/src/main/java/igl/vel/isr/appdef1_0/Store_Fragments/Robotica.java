@@ -1,6 +1,5 @@
 package igl.vel.isr.appdef1_0.Store_Fragments;
 
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -18,18 +17,15 @@ import android.view.ViewGroup;
 import igl.vel.isr.appdef1_0.MainActivity;
 import igl.vel.isr.appdef1_0.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class Leds extends Fragment {
+public class Robotica extends Fragment {
+
     View vista;
     MainActivity mainActivity;
     TabLayout tabLayout;
 
-    public Leds() {
-        // Required empty public constructor
-    }
+    public Robotica() {
 
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,25 +37,25 @@ public class Leds extends Fragment {
         return vista;
     }
 
+
     private void tabLayoutset() {
         tabLayout = vista.findViewById(R.id.tabI);
+        tabLayout.setBackgroundColor(Color.parseColor("#76d275"));
         crearTabs();
     }
 
     private void crearTabs() {
-        tabLayout.addTab(tabLayout.newTab().setText("LEDS"));
-        tabLayout.addTab(tabLayout.newTab().setText("FOCOS PILOTO"));
-        tabLayout.addTab(tabLayout.newTab().setText("MODULOS DE LEDS"));
-        tabLayout.addTab(tabLayout.newTab().setText("FUENTES Y ADAPTADORES"));
-        tabLayout.addTab(tabLayout.newTab().setText("TIRAS DE LEDS"));
-        tabLayout.addTab(tabLayout.newTab().setText("ACCESORIOS PARA TIRAS DE LEDS"));
-
+        tabLayout.addTab(tabLayout.newTab().setText("Motor reductor"));
+        tabLayout.addTab(tabLayout.newTab().setText("Motor a pasos"));
+        tabLayout.addTab(tabLayout.newTab().setText("Servomotor"));
+        tabLayout.addTab(tabLayout.newTab().setText("Motor"));
+        tabLayout.addTab(tabLayout.newTab().setText("Jumpers"));
     }
 
     private void toolbarset() {
         Toolbar toolbar = vista.findViewById(R.id.toolMain);
         toolbar.setBackgroundColor(Color.parseColor("#43a047"));
-        toolbar.setTitle("Led's");
+        toolbar.setTitle("Robotica");
         mainActivity = (MainActivity) getActivity();
         mainActivity.setSupportActionBar(toolbar);
         mainActivity.getSupportActionBar().setDisplayShowTitleEnabled(true);
@@ -71,10 +67,12 @@ public class Leds extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 igl.vel.isr.appdef1_0.mainFragment mainFragment = new igl.vel.isr.appdef1_0.mainFragment();
-                fragmentTransaction.replace(R.id.frame,mainFragment,null);
+                fragmentTransaction.replace(R.id.frame, mainFragment, null);
                 fragmentTransaction.addToBackStack(null).commit();
             }
         });
+
+
 
         /*toggle = new ActionBarDrawerToggle(mainActivity,mainActivity.drawerLayout,toolbar,R.string.openDrawer,R.string.closeDrawer);
         mainActivity.drawerLayout.addDrawerListener(toggle);
@@ -83,23 +81,23 @@ public class Leds extends Fragment {
 
 
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.toolfragments,menu);
+        inflater.inflate(R.menu.toolfragments, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case R.id.cart:
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 assert fragmentManager != null;
                 ShopCart cart = new ShopCart();
-                fragmentTransaction.replace(R.id.frame,cart,null);
+                fragmentTransaction.replace(R.id.frame, cart, null);
                 fragmentTransaction.addToBackStack(null).commit();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 }
+

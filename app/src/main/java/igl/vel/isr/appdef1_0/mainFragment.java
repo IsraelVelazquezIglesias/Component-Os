@@ -33,6 +33,14 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import igl.vel.isr.appdef1_0.Adaptadores.ImageAdapter;
+import igl.vel.isr.appdef1_0.Store_Fragments.Arduino;
+import igl.vel.isr.appdef1_0.Store_Fragments.Cable;
+import igl.vel.isr.appdef1_0.Store_Fragments.Herramienta;
+import igl.vel.isr.appdef1_0.Store_Fragments.Interruptores;
+import igl.vel.isr.appdef1_0.Store_Fragments.Optoelectronica;
+import igl.vel.isr.appdef1_0.Store_Fragments.Pics;
+import igl.vel.isr.appdef1_0.Store_Fragments.Quimicos;
+import igl.vel.isr.appdef1_0.Store_Fragments.Robotica;
 import igl.vel.isr.appdef1_0.Store_Fragments.ShopCart;
 import igl.vel.isr.appdef1_0.var_per.stringblob;
 import java.util.ArrayList;
@@ -56,7 +64,7 @@ public class mainFragment extends Fragment {
     RecyclerView recycler;
     ActionBarDrawerToggle toggle;
     Menu menu;
-    FloatingActionButton actionButton;
+
     public MainActivity mainActivity;
     View v;
     ViewPager viewPager;
@@ -72,7 +80,7 @@ public class mainFragment extends Fragment {
         viewPager.setPageTransformer(true, new Efectos());
         viewPager.setAdapter(imageAdapter);
         Toolbar toolbar = v.findViewById(R.id.toolMain);
-        toolbar.setBackgroundColor(Color.parseColor("#27ae60"));
+        toolbar.setBackgroundColor(Color.parseColor("#43a047"));
         mainActivity.setSupportActionBar(toolbar);
         //getActivity().onCreateOptionsMenu()
         setHasOptionsMenu(true);
@@ -86,19 +94,6 @@ public class mainFragment extends Fragment {
         //recycler.setLayoutManager(new LinearLayoutManager(v.getContext(),LinearLayoutManager.VERTICAL,false));
 
         recycler.setLayoutManager(new GridLayoutManager(v.getContext(),2));
-
-        actionButton = v.findViewById(R.id.action);
-        actionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                assert fragmentManager != null;
-                ShopCart cart = new ShopCart();
-                fragmentTransaction.replace(R.id.frame,cart,null);
-                fragmentTransaction.addToBackStack(null).commit();
-            }
-        });
 
         ListDatos = new ArrayList<>();
         llenarPantalla();
@@ -153,6 +148,46 @@ public class mainFragment extends Fragment {
                 fragmentTransaction.replace(R.id.frame,energia,null);
                 fragmentTransaction.addToBackStack(null).commit();
                 break;
+            case "Arduino":
+                Arduino arduino = new Arduino();
+                fragmentTransaction.replace(R.id.frame, arduino, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "PIC'S":
+                Pics pics = new Pics();
+                fragmentTransaction.replace(R.id.frame, pics, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "Optoelectronica":
+                Optoelectronica opto = new Optoelectronica();
+                fragmentTransaction.replace(R.id.frame, opto, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "Robotica":
+                Robotica robotica = new Robotica();
+                fragmentTransaction.replace(R.id.frame, robotica, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "Quimicos":
+                Quimicos quimicos = new Quimicos();
+                fragmentTransaction.replace(R.id.frame, quimicos, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "Cable":
+                Cable cable = new Cable();
+                fragmentTransaction.replace(R.id.frame, cable, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "Interruptores":
+                Interruptores interruptores = new Interruptores();
+                fragmentTransaction.replace(R.id.frame, interruptores, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
+            case "Herramientas":
+                Herramienta herramienta = new Herramienta();
+                fragmentTransaction.replace(R.id.frame, herramienta, null);
+                fragmentTransaction.addToBackStack(null).commit();
+                break;
 
                 default:
                     break;
@@ -189,6 +224,14 @@ public class mainFragment extends Fragment {
         switch (item.getItemId())
         {
             case R.id.search:
+                break;
+            case R.id.cart:
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                assert fragmentManager != null;
+                ShopCart cart = new ShopCart();
+                fragmentTransaction.replace(R.id.frame, cart, null);
+                fragmentTransaction.addToBackStack(null).commit();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -242,4 +285,6 @@ public class mainFragment extends Fragment {
             }
         }
     }
+
+
 }

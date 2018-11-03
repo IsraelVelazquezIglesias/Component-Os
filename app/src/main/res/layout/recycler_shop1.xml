@@ -84,7 +84,6 @@
             android:clickable="true"
             card_view:layout_constraintStart_toEndOf="@+id/cantItem"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:srcCompat="@color/colorAccent"
             android:src="@drawable/plus"
             />
     </android.support.constraint.ConstraintLayout>
